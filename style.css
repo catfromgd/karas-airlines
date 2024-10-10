@@ -1,0 +1,107 @@
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    cursor: default;
+    user-select: none;
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);    /* цвет плашки */
+    border-radius: 10px 0 0 10px;       /* закругления плашки */
+    border: 3px solid rgb(0, 0, 0);  /* padding вокруг плашки */
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.arrow{
+    width: 10px;
+    height: 10px;
+    transition: rotateX 0.5s ease-in-out;
+    transition: rotateY 0.5s ease-in-out;
+    cursor: pointer;
+}
+header{
+    height: 10vh;
+    border-radius: 0px 0px 20px 20px;
+    transition: height 0.5s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    display: absolute;
+}
+.shortHeader{
+    padding-top: 2vh;
+    display: flex;
+    align-items: center;
+}
+body{
+    background-color: white;
+    clear: both;
+    height: 1000px;
+}
+.headerP{
+    color: white;
+    font-weight: 700;
+    text-justify: center;
+    margin: 0 10px 0 10px;
+}
+.fullHeaderContent{
+    color: white;
+    opacity: 0;
+    margin: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ticketContent{
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    background-color: rgb(176, 176, 176);
+    border-radius: 20px;
+    width: 200px;
+}
+.ticketContentH2{
+    margin-bottom: 10px;
+}
+.ticketContentH4{
+    margin-bottom: 10px;
+}
+.downloadButton{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+    padding: 20px 0;
+    width: 60vw;
+    margin-right: 40vw;
+}
+.categoriesItem{
+    border-radius: 30px;
+    color: white;
+    width: 15vw;
+    height: 40vh;
+    cursor: pointer;
+}
+.categoriesItemName{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.categoriesItemDescription{
+    margin-left: 10px;
+    margin-top: 10px;
+}
