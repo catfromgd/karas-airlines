@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    color: white;
+    background-color: #000000;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 10000px;
+}
+nav {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    transition: background-color 0.5s ease-out;
+    padding: 10px 0;
+    text-align: center;
+    padding-top: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    transition: border 0.5s ease-in-out;
+    padding: 10px;
+    margin: 0 10px;
+}
+nav a:hover {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    transition: border 0.5s ease-in-out;
+}
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+#cityFrom {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #ffffff;
+    padding-left: 10px;
+}
+
+#cityTo {
+    width: 150px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    padding-left: 10px;
+}
+
+#date {
+    /* Основные стили */
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+
+    /* Бордеры и радиус */
+    border: 2px solid #ffffff;
+
+    /* Фон */
+    background: #000000;
+
+    /* Оставляем место для иконки */
+    padding-right: 40px;
+    padding-left: 10px;
+    position: relative;
+}
+
+#date::-webkit-calendar-picker-indicator {
+    /* Иконка календаря */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #007BFF;
+    opacity: 1; /* Убедитесь, что он видим */
+}
+
+#date:focus {
+    border-color: #ccc;
+    outline: none;
+}
+
+#openModal {
+    width: 150px;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid rgb(255, 234, 0);
+    padding-left: 10px;
+    background-color: rgb(255, 234, 0);
+    color: #000000;
+    font-weight: 550;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.firstStockPhotoDiv{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 50vw;
+}
+.firstStockPhoto{
+    width: 20vw;
+    margin-left: 3vw;
+}
+
+
+
+#welcomeSection {
+    background-color: black;
+}
+
+@keyframes moveWelcomeText {
+    from {
+        transform: translateY(10px);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+.welcomeText {
+    font-family: 'JetBrains Mono';
+    user-select: none;
+    margin: 40px 0px 0px 60px;
+    color: #ffffff;
+}
+
+.welcomeTextMain {
+    font-size: 200px;
+    animation: moveWelcomeText 1s ease-in-out;
+}
+
+.welcomeTextSecond {
+    animation: moveWelcomeText 1s ease-in-out;
+    animation-delay: 0.15s;
+    font-size: larger;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.welcomeContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.learnMoreButton {
+    margin-top: 10vh;
+    cursor: pointer;
+    color: #ffffff;
+    animation: opacity 1s ease-in-out;
+    animation-delay: 0.7s;
+    padding: 10px;
+    border-radius: 50px;
+    border-width: 5px;
+    border: 2px solid #ffffff;
+}
+
+.regularRoutesScheme {
+    width: 50vw;
+}
+
+.schemeContainer {
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    height: 70vh;
+}
+#regularRoutesScheme{
+    position: absolute;
+    max-width: 100%;
+    transition: transform 0.2s ease;
+    user-select: none; /* Отключаем выделение текста */
+    -webkit-user-drag: none; /* Отключаем перетаскивание в WebKit-браузерах */
+    -moz-user-drag: none; /* Отключаем перетаскивание в Firefox */
+    -ms-user-drag: none; /* Отключаем перетаскивание в IE */
+}

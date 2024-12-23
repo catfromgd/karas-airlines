@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная | Карась авиалинии</title>
+    <!-- Изначальная иконка -->
+    <link id="favicon" rel="icon" href="favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav id="nav">
+        <a href="#" onclick="showSection('home')">Главная</a>
+        <a href="#" onclick="showSection('tickets')">Билеты</a>
+        <a href="#" onclick="showSection('services')">Услуги</a>
+        <a href="#" onclick="showSection('contact')">Карась авиалинии Карго</a>
+    </nav>
+
+    <!-- Секции контента -->
+    <section id="home">
+        <p id="welcomeText">
+            <p id="welcomeTextMain" class="welcomeTextMain welcomeText">Добро пожаловать!</p>
+            <p id="welcomeTextSecond" class="welcomeTextSecond welcomeText">Вас приветствует авиакомпания "Карась авиалинии"</p>
+        </p>
+        <div class="welcomeContainer">
+            <div class="learnMoreButton" onclick="showSection('home')">Узнать больше</div>
+        </div>
+        <div class="regularRoutes">
+            <div class="schemeContainer">
+                <img src="./assets/maps/karas-airlines_scheme.svg" alt="" class="regularRoutesScheme" id="regularRoutesScheme" draggable="false">
+            </div>
+        </div>
+    </section>
+    <section id="tickets">
+        <h1>Билеты</h1>
+        <p>Найдите билеты Карась авиалиний</p>
+        <div class="ticketFinder">
+            <input type="text" id="cityFrom" placeholder="Отправление" autocomplete="off">
+            <input type="text" id="cityTo" placeholder="Назначение" autocomplete="off">
+            <input type="date" id="date" autocomplete="off">
+            <button id="openModal" onclick="ticketFinder()">Найти билеты</button>
+        </div>
+        <!-- Модальное окно с ответом на поиск билетов -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modalH3">Это модальное окно!</h3>
+                <p id="modalText">Описание</p>
+            </div>
+        </div>
+        <div class="firstStockPhotoDiv">
+            <div class="firstStockPhotoTextDiv">
+                <h2>Будьте счастливы с Карась авиалиниями</h2>
+                <p>Удобные маршруты:</p>
+                <p>K1 "Европа" Москва - Минск - Берлин - Лондон - Париж - Мадрид</p>
+                <p>K2 "Сибирь" Москва - Челябинск - Новосибирск - Иркутск - Хабаровск</p>
+                <p>K3 "Арктика" Москва - Мурманск - Архангельск - Воркута - Норильск - Тикси</p>
+            </div>
+            
+            <img src="./assets/stack-pics/main/stock_main001.jpg" alt="Фото 1" class="firstStockPhoto">
+        </div>
+    </section>
+    <section id="services">
+        <h1>Услуги</h1>
+        <p>Мы предлагаем широкий спектр услуг.</p>
+    </section>
+    <section id="contact">
+        <h1>Контакты</h1>
+        <p>Свяжитесь с нами для получения дополнительной информации.</p>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
